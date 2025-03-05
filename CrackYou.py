@@ -93,7 +93,7 @@ def parse_args():
     parser.add_argument("-i", "--input", type=str, required=True, help="Path to directories wordlist")
     parser.add_argument("-o", "--output", type=str, required=False, help="File to save scan results (Example: -o result.txt)")
     parser.add_argument("-time", "--timeout", type=int, default=7, help="Request timeout (default: 7s. Example: -time 10)")
-    parser.add_argument("-sc", "--status-code", type=str, help="Comma-separated status codes to filter (Example: -t 200). Default value - 200")
+    parser.add_argument("-sc", "--status-code", type=str,  help="Comma-separated status codes to filter (Example: -t 200). Default value - 200")
     parser.add_argument("-lb", "--lean-body", action='store_true', help="Show response body length")
     parser.add_argument("-e", "--extensions", type=str, help="Comma-separated file extensions (Example: -e php,html,txt,js)")
     parser.add_argument("-v", "--verbose", action='store_true', help="Verbose mode (show headers)")
@@ -142,7 +142,7 @@ def main():
           f'Extensions: {args.extensions}\n'
           f'Verbose mode: {args.verbose}\n'
           f'Quiet mode: {args.quiet}\n'
-          f'Status Code: {args.status_code}{Style.RESET_ALL}')
+          f'Status Codes: {args.status_code}{Style.RESET_ALL}')
     print('#' * 50)
     print()
     print(f"{Fore.LIGHTMAGENTA_EX}-{Style.RESET_ALL}" * 50)
